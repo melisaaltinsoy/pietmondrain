@@ -1,19 +1,19 @@
-import React from "react"
+import React from "react";
 
-import "./App.css"
+import "./App.css";
 
-const colors = ["#F2F5F1", "#D40920", "#1356A2", "#F7D842"]
+const colors = ["#F2F5F1", "#D40920", "#1356A2", "#F7D842"];
 
 function App() {
-  const inputArray = Array(7).fill(0)
+  const inputArray = Array(7).fill(0);
 
   const coordinates = inputArray.map((n, i) => {
-    const randomX = Math.floor(Math.random() * (7 - 0) + 0) * 100
-    const randomY = Math.floor(Math.random() * (7 - 0) + 0) * 100
-    return [randomX, randomY]
-  })
+    const randomX = Math.floor(Math.random() * (7 - 0) + 0) * 100;
+    const randomY = Math.floor(Math.random() * (7 - 0) + 0) * 100;
+    return [randomX, randomY];
+  });
 
-  console.log(coordinates)
+  console.log(coordinates);
 
   return (
     <svg width="800" height="800" fill="none">
@@ -35,11 +35,13 @@ function App() {
             height={`${i[1]}`}
             stroke="black"
             strokeWidth="10"
+            fill="black"
+            fillOpacity={Math.random()}
           />
-        )
+        );
       })}
     </svg>
-  )
+  );
 }
 
-export default App
+export default App;
